@@ -1,5 +1,6 @@
 <?php
-
+require_once "genere.php"; 
+require_once "actor.php";
 
 class Movie {
 
@@ -7,6 +8,7 @@ class Movie {
     private string $director;
     private string $release_year;
     private Genere $genere;
+    private array $cast;
 
 
 
@@ -15,6 +17,7 @@ class Movie {
         $this->title            = $title;
         $this->director         = $director;
         $this->genere           = $genere;
+        $this->cast             = [];
        
 
     }
@@ -29,10 +32,25 @@ class Movie {
         return $this->release_year;
     }
 
+
+    public function addActor(Actor $actor) {
+        $this->cast[] = $actor;
+    }
+
+    public function getCast() {
+        return $this->cast;
+    }
+
+
+
     public function __toString() {
         
-        return "{$this->title} {$this->release_year} {$this->director} {$this->genere}";
+        return "{$this->title} {$this->release_year} {$this->director} {$this->genere} {$this->cast}";
     }
+
+
+
+
 }
 
 
