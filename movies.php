@@ -31,7 +31,7 @@ class Movie {
 
     public function __toString() {
         
-        return "Titolo: {$this->title}, Anno d'uscita: {$this->release_year}, Diretto da: {$this->director}, Genere: {$this->genere}";
+        return "{$this->title} {$this->release_year} {$this->director} {$this->genere}";
     }
 }
 
