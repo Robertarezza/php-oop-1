@@ -10,3 +10,6 @@ $movie1->setRelease_year(2001);
 var_dump($movie1 );
 
 echo $movie1;
+
+?>
+

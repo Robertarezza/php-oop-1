@@ -9,4 +9,12 @@ class Genere {
         $this->title = $title;
 
     }
+
+
+
+    public function __toString() {
+        return $this->title;
+    }
+
+
 }

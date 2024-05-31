@@ -28,6 +28,11 @@ class Movie {
 
         return $this->release_year;
     }
+
+    public function __toString() {
+        
+        return "Titolo: {$this->title}, Anno d'uscita: {$this->release_year}, Diretto da: {$this->director}, Genere: {$this->genere}";
+    }
 }
 
 
