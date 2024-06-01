@@ -1,19 +1,17 @@
 <?php
-
-
 class Genere {
-    private string $title;
+    private string $name;
 
-    public function __construct(string $title) {
-        
-        $this->title = $title;
-
+    public function __construct(string $name) {
+        $this->name = $name;
     }
 
-
-    public function __toString() {
-        return $this->title;
+    public function getName(): string {
+        return $this->name;
     }
 
-
+    public function __toString(): string {
+        return $this->name;
+    }
 }
+?>
